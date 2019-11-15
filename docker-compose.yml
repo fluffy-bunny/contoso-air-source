@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  plex:
+    image: ghstahl/contoso-air-source
+    ports:
+      - "4000:3000"
+    environment:
+        - COSMOS_DB_NAME=${COSMOS_DB_NAME} # here it is
+        - COSMOS_DB_AUTH_KEY=${COSMOS_DB_AUTH_KEY}
+        - COSMOS_DB_URL=${COSMOS_DB_URL}
+        - COSMOS_DB_DATABASE=${COSMOS_DB_DATABASE}
