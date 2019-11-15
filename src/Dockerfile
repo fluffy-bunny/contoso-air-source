@@ -13,7 +13,9 @@ RUN npm install
 
 # Bundle app source
 COPY . .
+RUN npm run build
+RUN npm run unit-test
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD [ "node", "server.js" ]
